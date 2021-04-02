@@ -1,0 +1,400 @@
+<html>
+<head>
+	<title>Starbucks | Business Webpage</title>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Karla:wght@500&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		body{
+			font-family: 'Karla', sans-serif;
+		}
+		.navbar{
+			display: flex;
+			align-items: center;
+			padding: 20px;
+		}
+		nav{
+			flex: 1;
+			text-align: right;
+		}
+		nav ul{
+			display: inline-block;
+			list-style-type: none;
+		}
+		nav ul li{
+			display: inline-block;
+			margin-right: 20px;
+		}
+		a{
+			font-size: 20px;
+			text-decoration: none;
+			color: green;
+		}
+		nav ul li a.active,
+		nav ul li a:hover{
+			background: black;
+			color: white;
+			padding: 8px 13px;
+			border-radius: 5px;
+			font-weight: semi-condensed;
+			transition: 0.25s;
+		}
+		nav .fa-shopping-bag{
+			margin-botton: 25px;
+		}
+		p{
+			color: green;
+		}
+		.container{
+			max-width: 1300px;
+			margin: auto;
+			padding-left: 25px;
+			padding-right: 25px;
+		}
+		.head .row{
+			margin-top: 70px;
+		}
+		.row{
+			display: flex;
+			align-items: center;
+			flex-wrap: wrap;
+			justify-content: space-around;
+		}
+		.col-2{
+			flex-basis: 50%;
+			min-width: 100px;
+		}
+		.col-2 img{
+			max-width: 100%;
+			padding: 25px 0;
+		}
+		.col-2 h1{
+			font-size: 50px;
+			line-height: 60px;
+			margin: 25px 0;
+		}
+		.button{
+			display: inline-block;
+			background: green;
+			color: white;
+			padding: 8px 15px;
+			margin: 30px 0;
+			border-radius: 30px;
+			transition: background 0.25s;
+		}
+		.button:hover{
+			background: black;
+			color: white;
+			font-weight: semi-condensed;
+		}
+		.categories{
+			background: radial-gradient(#ffffff,#f0ebe0);
+			margin: 70px 0;
+		}
+		.col-3{
+			flex-basis: 30%;
+			min-width: 250px;
+			margin-bottom: 0;
+		}
+		.col-3 img{
+			width: 100%;
+		}
+		.small-container{
+			max-width: 1080px;
+			margin: auto;
+			padding-left: 25px;
+			padding-right: 25px;
+		}
+		.col-4{
+			background-color: #2e1c00;
+			flex-basis: 25%;
+			padding: 10px;
+			min-width: 200px;
+			margin-bottom: 50px;
+			transition: transform 0.25s;
+		}
+		.col-4 img{
+			width: 100%;
+		}
+		.title{
+			text-align: center;
+			margin: 0 auto 80px;
+			position: relative;
+			line-height: 60px;
+			color: black;
+		}
+		.title::after{
+			content: '';
+			background: brown;
+			width: 80px;
+			height: 5px;
+			border-radius: 5px;
+			position: absolute;
+			bottom: 0;
+			left: 50%;
+			transform: translateX(-50%)
+		}
+		h4{
+			color: white;
+			font-weight: normal;
+		}
+		.col-4 p{
+			color: #e7ffd9;
+			font-size: 14px;
+		}
+		.rating .fa{
+			color: #e6dc22;
+		}
+		.col-4:hover{
+			transform: translateY(-5px);
+		}
+		.offer{
+			background: radial-gradient(#ffffff,#f0ebe0);
+			margin-top: 80px;
+			padding: 30px 0;
+		}
+		.col-2 .offer-img{
+			padding: 5px;
+		}
+		.col-2 h4{
+			font-size: 22px;
+			color: green;
+		}
+		h2{
+			color: white;
+		}
+		.footer{
+			background: #000;
+			color: white;
+			font-size: 14px;
+			padding: 60px 0 20px;
+		}
+		.footer p{
+			color: white;
+		}
+		.footer h3{
+			margin-bottom: 20px;
+		}
+		.footer-col-1, .footer-col-2, .footer-col-3, .footer-col-4{
+			min-width: 250px;
+			margin-bottom: 20px;
+		}
+		.footer-col-1{
+			flex-basis: 30%;
+		}
+		.footer-col-2{
+			flex: 1;
+			text-align: center;
+		}
+		.footer-col-2 img{
+			width: 180px;
+			margin-bottom: 20px;
+		}
+		.footer-col-3, .footer-col-4{
+			flex-basis: 12%;
+			text-align: center;
+		}
+		ul{
+			list-style-type: none;
+		}
+		.app-logo{
+			margin-top: 20px;
+		}
+		.app-logo img{
+			width: 140px;
+		}
+		.footer hr{
+			border: none;
+			background: white;
+			height: 1px;
+			margin: 20px 0;
+		}
+		.copyright{
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<div class="head">
+		<div class="container">
+			<div class="navbar">
+				<div class="logo">
+					<img src="https://upload.wikimedia.org/wikipedia/en/thumb/d/d3/Starbucks_Corporation_Logo_2011.svg/1200px-Starbucks_Corporation_Logo_2011.svg.png" width="90px">
+				</div>
+				<nav>
+					<ul>
+						<li><a href="" class="active">HOME</a></li>
+						<li><a href="">MENU</a></li>
+						<li><a href="">REWARDS</a></li>
+						<li><a href="">NEWS</a></li>
+						<li><a href="">ABOUT</a></li>
+					</ul>
+				</nav>
+				<i class="fa fa-shopping-bag"></i>
+			</div>
+			<div class="row">
+				<div class="col-2">
+				<h1>Welcome to Starbucks!</h1>
+				<p>To inspire and nurture the human spirit –
+				one person, one cup and one neighborhood at a time.</p>
+				<a href="" class="button">Learn more &#8594;</a>
+				</div>
+				<div class="col-2">
+					<img src="https://philanthropynw.org/sites/default/files/styles/news_16x9__1920x1080/public/content_images/news/Starbucks_White_Center_Mural_1920x1080px.jpg?itok=O7cFn5kS">
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<!------- featured categories --------->
+	<div class="categories">
+		<div class="small-container">
+			<div class="row">
+				<div class="col-3">
+					<img src="https://lh3.googleusercontent.com/proxy/CWqQ6zS6Z1GnXiTUxtVxVsStvv_p9yTFDV99qljr8wT4R8mP4pqkpoSLEsST25vB15ZL4aTffJcxpcKgUAfNck-Aoh0C6KFC79BqsMSH5SsmXLu2SmT0ZoYAvNiSiw0JYTj2">
+				</div>
+				<div class="col-3">
+					<img src="https://assets.stickpng.com/images/580b57fcd9996e24bc43c54b.png">
+				</div>
+				<div class="col-3">
+					<img src="https://lh3.googleusercontent.com/proxy/gGmNQ5FIpgBKH33qONuCM_GaWFn97GIL1sOkbk5lzgUEpZxJqNBdbfcyXxQ1QjG9b1EcyvpLlFfI-JUWcok4MV78vMh5aGUokw_QFeAx_Gbv3ooSp2c43ZsNg1ZzyhtFER8Q">
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!------- offer --------->
+	<div class="offer">
+		<div class="small-container">
+			<div class="row">
+				<div class="col-2">
+					<img src="https://content-prod-live.cert.starbucks.com/binary/v2/asset/137-68960.png" class="offer-img">
+				</div>
+				<div class="col-2">
+					<p>***Limited-time offer***</p>
+					<h1>STARBUCKS RESERVE&#174; COFFEE</h1>
+					<h4>Now for a limited time, you can explore these two incredible offerings: Ethiopia Yirgacheffe® Chelelektu and Guatemala Huehuetenango.</h4>
+					<a href="" class="button">Buy Now &#8594;</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!------- featured products --------->
+	<div class="small-container">
+		<h2 class="title"><br>Featured Products</h2>
+		<div class="row">
+			<div class="col-4">
+				<img src="https://assets.mystarbucks.com.au/imagecache/bestfit/620x634/_files/NEW-Photos-2016/Food/bakery.jpg" width="280px">
+				<h4>Butter Croissant</h4>
+				<div class="rating">
+					<i class="fa fa-star"></i>
+					<i class="fa fa-star"></i>
+					<i class="fa fa-star"></i>
+					<i class="fa fa-star"></i>
+					<i class="fa fa-star-half"></i>
+				</div>
+				<p>₱80.00</p>
+			</div>
+			<div class="col-4">
+				<img src="https://assets.mystarbucks.com.au/imagecache/bestfit/620x634/_files/Beverages/espresso_con_panna.jpg" width="280px">
+				<h4>Espresso Con Panna</h4>
+				<div class="rating">
+					<i class="fa fa-star"></i>
+					<i class="fa fa-star"></i>
+					<i class="fa fa-star"></i>
+					<i class="fa fa-star"></i>
+				</div>
+				<p>₱120.00</p>
+			</div>
+			<div class="col-4">
+				<img src="https://assets.mystarbucks.com.au/imagecache/bestfit/620x634/_files/NEW-Photos-2016/Food/cakes-slices.jpg" width="280px">
+				<h4>New York Baked Cheesecake</h4>
+				<div class="rating">
+					<i class="fa fa-star"></i>
+					<i class="fa fa-star"></i>
+					<i class="fa fa-star"></i>
+					<i class="fa fa-star"></i>
+					<i class="fa fa-star"></i>
+				</div>
+				<p>₱95.00</p>
+			</div>
+		</div>
+		<h2 class="title"><br>Starbucks News</h2>
+		<div class="row">
+			<div class="col-4">
+				<img src="https://stories.starbucks.com/uploads/2020/12/SBX20201209-ID-Sustainability-FeatureHorizontal.jpg">
+				<h2>Starbucks solidifies pathway to a planet positive future</h2><br>
+				<p>December 09, 2020 | 4 min read</p><br>
+				<p>Earlier this year, Starbucks shared its multi-decade commitment to become a resource positive company by 
+				storing more carbon than it emits, eliminating waste, and replenishing more freshwater than it uses.</p>
+			</div>
+			<div class="col-4">
+				<img src="https://stories.starbucks.com/uploads/2020/11/SBX20201201-WorldAIDSDay-Feature.jpg">
+				<h2>The Starbucks Foundation $500,000 donation helps (RED)’s fight against AIDS, COVID-19</h2><br>
+				<p>November 16, 2020 | 1 min read</p><br>
+				<p>On Dec. 1, in recognition of Giving Tuesday and World AIDS Day, The Starbucks Foundation will donate
+				$500,000 to the Global Fund to help fight AIDS with (RED).</p>
+			</div>
+			<div class="col-4">
+				<img src="https://stories.starbucks.com/uploads/2020/12/SBX20201204-Starbucks-Teams-Featured-Image.jpg">
+				<h2>A new way to gift: send Starbucks eGifts through Microsoft Teams</h2><br>
+				<p>December 16, 2020 | 1 min read</p><br>
+				<p>This year, we’ve shared a lot of experiences with our coworkers through Microsoft Teams meetings, chats, 
+				calls, emojis and gifs. Now, you can also share a cup of coffee (and more) by sending a Starbucks eGift virtually</p>
+			</div>
+		</div>
+	</div>
+	
+	<!------- footer --------->
+	<div class="footer">
+		<div class="container">
+			<div class="row">
+				<div class="footer-col-1">
+					<h3>Download Our Starbucks&#174; App</h3>
+					<p>Download app for Android and iOS.</p>
+					<div class="app-logo">
+						<img src="https://cdn.worldvectorlogo.com/logos/get-it-on-google-play.svg">
+						<img src="https://cdn.worldvectorlogo.com/logos/available-on-the-app-store.svg">
+					</div>
+				</div>
+				<div class="footer-col-2">
+					<img src="https://lpcreativeco.com/wp-content/uploads/2017/08/combination-logo.jpg">
+					<p>"Our vision is to treat people like family, and they will be loyal and give their all.”</p>
+				</div>
+				<div class="footer-col-3">
+					<h3>Useful Links</h3>
+					<ul>
+						<li>Coupons</li>
+						<li>Store Locations</li>
+						<li>Privacy Policy</li>
+						<li>Terms of Use</li>
+						<li>Submit Your Idea</li>
+					</ul>
+				</div>
+				<div class="footer-col-4">
+					<h3>Follow Us</h3>
+					<ul>
+						<li>Facebook</li>
+						<li>Twitter</li>
+						<li>Instagram</li>
+					</ul>
+				<br>
+				<i class="fa fa-facebook-f"></i>
+				<i class="fa fa-twitter"></i>
+				<i class="fa fa-instagram"></i>
+				
+				</div>
+			</div>
+			<hr>
+			<p class="copyright">Copyright 2021 - The Starbucks Company&#169;</p>
+		</div>
+	</div>
+</body>
+</html>
